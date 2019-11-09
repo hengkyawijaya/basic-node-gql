@@ -9,5 +9,8 @@ module.exports = {
     updatePost: async (root, { id, input }, { Post }) => {
         thePost = await Post.findOneAndUpdate(id, input)
         return thePost
-     }
+     },
+     singleUpload: async (root, { file }, {  }) => {
+        
+     },
 }

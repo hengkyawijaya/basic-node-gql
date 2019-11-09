@@ -1,6 +1,7 @@
 const { gql } = require('apollo-server-express');
 const post = require('./post');
 const notif = require('./notif')
+const file = require('./file')
 
 const schema = gql`
 scalar Date
@@ -13,10 +14,11 @@ scalar Date
  type Mutation {
     createPost(input: inputPost!):Post
     updatePost(id: ID!, input: inputPost!):Post
+    singleUpload(file: Upload!): File!
  }
 
  type Subscription {
     listenNotification: Notif
   }
 `
-module.exports = [schema, post, notif]
+module.exports = [schema, post, notif, file]

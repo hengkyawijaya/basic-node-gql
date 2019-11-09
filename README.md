@@ -10,20 +10,38 @@
 - Having knowledge about basic docker
 
 ### How To Run
+#### Backend
 1. Run mongodb server using docker
 ```
 docker-compose -f mongo/docker-compose.yml up
 ```
-2. Install dependencies 
+2. Open folder backend
+3. Install dependencies 
 ```
 yarn install
 ```
-3. Start development server
+4. Start development server
 ```
 yarn dev
 ```
-4. Open link down below to access graphql playgroud
+5. Open link down below to access graphql playgroud
 ```
 http://localhost:8001/graphql
 ```
-5. Experiment creating new Query, Mutation, Subscription, and Resolvers.
+6. Experiment creating new Query, Mutation, Subscription, and Resolvers.
+
+#### React-app
+1. Open folder react-app
+```
+yarn install
+```
+2. Start the react apps
+```
+yarn start
+```
+3. Open link down below to access react app from browser
+```
+http://localhost:3000
+```
+
+

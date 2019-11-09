@@ -1,7 +1,7 @@
 
 module.exports = {
     getPosts: async (root, { page, limit }, { Post }) => {
-       thePosts = await Post.paginate({  }, { page, limit })
+       thePosts = await Post.paginate({  }, { sort:{ createdAt: 'desc'  }, page, limit })
        return {
            posts: thePosts.docs,
            total: thePosts.total,
